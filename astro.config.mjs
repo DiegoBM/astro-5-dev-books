@@ -5,6 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 import node from "@astrojs/node";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   output: "server",
@@ -28,7 +30,5 @@ export default defineConfig({
     },
   },
 
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: vercel(),
 });
